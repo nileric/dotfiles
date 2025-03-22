@@ -1,0 +1,22 @@
+# Homebrew
+fish_add_path --prepend /opt/homebrew/sbin /opt/homebrew/bin
+
+# Python
+fish_add_path --prepend /opt/homebrew/opt/python@3.8/libexec/bin
+
+# OpenSSL
+fish_add_path --prepend /opt/homebrew/opt/openssl@3/lib/pkgconfig
+set -gx PKG_CONFIG_PATH "/opt/homebrew/opt/openssl@3/lib/pkgconfig"
+
+# PostgreSQL
+fish_add_path --prepend /opt/homebrew/opt/libpq/bin
+
+# Node.js
+set -gx NODE_OPTIONS --openssl-legacy-provider
+
+# XDG_CONFIG_HOME
+set -gx XDG_CONFIG_HOME "$HOME/.config"
+
+# PLATFROM
+set -gx PLATFROM linux/arm64
+

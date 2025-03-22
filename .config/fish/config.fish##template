@@ -1,0 +1,35 @@
+set fish_greeting
+
+# Aliases
+alias vim='nvim'
+alias lzg='lazygit'
+alias lzd='sudo lazydocker'
+
+{% if yadm.os == "Darwin" %}
+{% include "config.fish.{{ yadm.os }}" %}
+{% endif %}
+
+{% if yadm.os == "Linux" %}
+{% include "config.fish.{{ yadm.os }}" %}
+{% endif %}
+
+# Add custom bin directories to PATH
+fish_add_path --prepend /usr/local/bin $HOME/.local/bin $HOME/bin
+
+# Go
+set -gx GOPATH "$HOME/go"
+fish_add_path --prepend /usr/local/go/bin $GOPATH/bin
+fish_add_path --prepend $HOME/go/bin
+
+# Editors
+set -gx EDITOR nvim
+set -gx KUBE_EDITOR nvim
+
+# GPG
+set -gx GPG_TTY (tty)
+
+# Starship
+starship init fish | source
+
+# Zoxide
+zoxide init fish --cmd cd | source

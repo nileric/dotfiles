@@ -1,0 +1,9 @@
+fish_add_path /home/{{ yadm.user }}/bin
+
+# Docker aliases
+alias docker-start='systemctl start docker.service'
+alias docker-stop='systemctl stop docker.service'
+
+# Bluetooth aliases
+alias blue-start='systemctl start bluetooth.service'
+alias blue-stop='systemctl stop bluetooth.service'
