@@ -28,8 +28,5 @@ set -gx KUBE_EDITOR nvim
 # GPG
 set -gx GPG_TTY (tty)
 
-# Starship
-starship init fish | source
-
 # Zoxide
 zoxide init fish --cmd cd | source
