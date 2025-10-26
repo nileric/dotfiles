@@ -63,3 +63,7 @@ then
 
     eval "$(zoxide init --cmd cd zsh)"
 fi
+
+if [[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
