@@ -2,6 +2,11 @@ return {
   "saghen/blink.cmp",
   opts = function(_, opts)
     vim.b.completion = true
+    opts.keymap = {
+      preset = "enter",
+      ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+      ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+    }
 
     Snacks.toggle({
       name = "Completion",
