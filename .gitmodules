@@ -1,0 +1,3 @@
+[submodule "/home/nileric/.zsh/zsh-autosuggestions"]
+	path = /home/nileric/.zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
