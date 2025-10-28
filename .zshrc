@@ -61,7 +61,11 @@ export KUBE_EDITOR="nvim"
 
 export GPG_TTY=$(tty)
 
-# zoxide
+if [ -x "$(which fzf)" ];
+then
+  source <(fzf --zsh)
+fi
+
 if [ -x "$(which zoxide)" ];
 then
     function z () {
