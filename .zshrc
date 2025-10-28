@@ -3,7 +3,7 @@ compinit
 
 alias vim='nvim'
 alias lzg='lazygit'
-alias lzd='sudo lazydocker'
+alias lzd='lazydocker'
 
 # macOS Specific Configurations
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -30,10 +30,11 @@ fi
 # linux Specific Configuration
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export PATH=$PATH:/home/nileric/bin
-
-    # docker
-    alias docker-start='systemctl start docker.service'
-    alias docker-stop='systemctl stop docker.service'
+ 
+    #podman
+    # https://github.com/jesseduffield/lazydocker/issues/4#issuecomment-2618979105
+    export DOCKER_HOST="unix:///run/user/1000/podman/podman.sock"
+    alias docker='podman'
 
     # bluetooth
     alias blue-start='systemctl start bluetooth.service'
