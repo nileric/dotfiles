@@ -6,4 +6,4 @@ ZSHCONFIG="$HOME/.config/zsh"
 [[ -f "$ZSHCONFIG/aliases.zsh" ]] && source "$ZSHCONFIG/aliases.zsh"
 [[ -f "$ZSHCONFIG/plugins.zsh" ]] && source "$ZSHCONFIG/plugins.zsh"
 [[ -f "$ZSHCONFIG/prompt.zsh" ]] && source "$ZSHCONFIG/prompt.zsh"
-
+[[ -f "$ZSHCONFIG/health.zsh" ]] && source "$ZSHCONFIG/health.zsh"
