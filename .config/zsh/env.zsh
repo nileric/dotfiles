@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 path=(
   $HOME/bin
   $HOME/.local/bin

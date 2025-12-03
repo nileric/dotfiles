@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ZSHCONFIG="$HOME/.config/zsh"
 
 [[ -f "$ZSHCONFIG/history.zsh" ]] && source "$ZSHCONFIG/history.zsh"

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 fpath+=($ZSHCONFIG/pure)
 
 autoload -U promptinit; promptinit

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 health_check() {
     local -a terminal_utils=(
         kitty
@@ -17,6 +19,7 @@ health_check() {
     local -a utils=(
         fzf
         zoxide
+        shellcheck
     )
 
     local -a programming_langs=(
@@ -67,4 +70,4 @@ health_check() {
     return $(( missing > 0 ? 1 : 0 ))
 }
 
-alias health='health_check'
+alias health="health_check"
