@@ -29,6 +29,7 @@ health_check() {
 
     local -a others=(
         kanata
+        quickemu
     )
 
     local -a os_specific_utils=()

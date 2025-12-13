@@ -15,14 +15,19 @@ path+=(
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  path+=(
-    /opt/homebrew/bin
-    /opt/homebrew/sbin
-    /opt/homebrew/opt/python@3.8/libexec/bin
-    /opt/homebrew/opt/openssl@3/lib/pkgconfig
-  )
-  export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
-  export NODE_OPTIONS=--openssl-legacy-provider
+  if [[ "$(uname -m)" == "arm64" ]]; then
+    path=(/opt/homebrew/bin /opt/homebrew/sbin $path)
+  else
+    path=(/usr/local/bin /usr/local/sbin $path)
+  fi
+  
+  if command -v brew &> /dev/null; then
+    eval "$(brew shellenv)"
+  fi
+  export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_NO_AUTO_UPDATE=1
+  export HOMEBREW_NO_ANALYTICS=1
+  
   export XDG_CONFIG_HOME="$HOME/.config"
 fi
 
