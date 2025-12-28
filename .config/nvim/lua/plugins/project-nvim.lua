@@ -4,7 +4,7 @@ return {
     require("project_nvim").setup({
       manual_mode = false,
       detection_methods = { "pattern" },
-      patterns = { ".git", "package.json" },
+      patterns = { ".git" },
     })
   end,
 }
