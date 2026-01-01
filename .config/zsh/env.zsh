@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+export EDITOR='nvim'
+export KUBE_EDITOR='nvim'
+
+# PATH
 path=(
   $HOME/bin
   $HOME/.local/bin
