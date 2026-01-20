@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+alias dot-git='yadm enter lazygit'
+
 dot-re-add-all() {
   local -a to_add=(
     ~/.tmux.conf
