@@ -15,3 +15,15 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     compinit -C
   fi
 fi
+
+if command -v kubectl &>/dev/null; then
+  # lazy-load kubectl completion on first use
+  _kubectl_completion_lazy() {
+    # drop loader and load real completion
+    unfunction _kubectl_completion_lazy 2>/dev/null
+    source <(kubectl completion zsh)
+  }
+
+  # attach lazy loader to kubectl completion
+  compdef _kubectl_completion_lazy kubectl
+fi
