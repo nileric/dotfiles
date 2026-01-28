@@ -3,6 +3,9 @@
 export EDITOR='nvim'
 export KUBE_EDITOR='nvim'
 
+export PAGER='less'
+export LESS='-i -R -F -X -M'
+
 # PATH
 path=(
   $HOME/bin
