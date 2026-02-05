@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 if command -v fzf &> /dev/null; then
   eval "$(fzf --zsh)"

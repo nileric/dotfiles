@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 export EDITOR='nvim'
 export KUBE_EDITOR='nvim'

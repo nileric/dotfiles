@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 os_upgrade() {
   if [[ "$OSTYPE" == "darwin"* ]]; then

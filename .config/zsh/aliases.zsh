@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 alias vim='nvim'
 alias lzg='lazygit'

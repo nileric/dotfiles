@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 alias dot-git='yadm enter lazygit'
 alias dot-submodules-update='yadm submodule update --remote'
