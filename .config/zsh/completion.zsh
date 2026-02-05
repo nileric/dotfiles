@@ -27,3 +27,6 @@ if command -v kubectl &>/dev/null; then
   # attach lazy loader to kubectl completion
   compdef _kubectl_completion_lazy kubectl
 fi
+
+# accept on Tab
+bindkey '^I' autosuggest-accept
