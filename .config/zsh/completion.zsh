@@ -28,5 +28,3 @@ if command -v kubectl &>/dev/null; then
   compdef _kubectl_completion_lazy kubectl
 fi
 
-# accept on Tab
-bindkey '^I' autosuggest-accept

@@ -12,6 +12,7 @@ dot-re-add-all() {
     ~/.config/lazygit/
     ~/.config/kitty/
     ~/.config/nvim/
+    ~/.config/ghostty/
   )
 
   for f in "${to_add[@]}"; do 
