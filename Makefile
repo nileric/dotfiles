@@ -8,18 +8,27 @@ DOTFILES := $(HOME)/Makefile \
 	$(HOME)/.config/nvim/ \
 	$(HOME)/.config/ghostty/
 
-dotfiles-rescan:
+dots-rescan:
 	@for f in $(DOTFILES); do \
 		yadm add "$$f"; \
 	done
 
-dotfiles-update-submodule:
+dots-submodule-update:
 	yadm submodule update --remote
 
-dotfiles-git:
+dots-git:
 	yadm enter lazygit
 
+macos-upgrage:
+	brew update && brew upgrade
+
+fedora-upgrade:
+	sudo dnf upgrade -y
+	sudo flatpak update -y
+
 .PHONY: help \
-	dotfiles-rescan \
-	dotfiles-update-submodule \
-	dotfiles-git
+	dots-rescan \
+	dots-submodule-update \
+	dots-git \
+	macos-upgrage \
+	fedora-upgrade
