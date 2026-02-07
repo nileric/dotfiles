@@ -27,22 +27,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   else
     path=(/usr/local/bin /usr/local/sbin $path)
   fi
-  
+
   if command -v brew &> /dev/null; then
     eval "$(brew shellenv)"
   fi
   export HOMEBREW_NO_ENV_HINTS=1
   export HOMEBREW_NO_AUTO_UPDATE=1
   export HOMEBREW_NO_ANALYTICS=1
-  
-  export XDG_CONFIG_HOME="$HOME/.config"
-fi
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  export DOCKER_HOST="unix:///run/user/1000/podman/podman.sock"
-  alias docker='podman'
-  alias blue-start='systemctl start bluetooth.service'
-  alias blue-stop='systemctl stop bluetooth.service'
+  export XDG_CONFIG_HOME="$HOME/.config"
 fi
 
 export PATH
