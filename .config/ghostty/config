@@ -5,16 +5,17 @@ shell-integration-features = ssh-env
 
 theme = dark:TokyoNight, light:TokyoNight Day
 
+gtk-titlebar = false
+
 # Audio/Bell
 # Disable all bell features (no sound, no visual bell)
 bell-features = no-system,no-audio,no-attention,no-title,no-border
 
 # Font Configuration
-font-family = "FiraCode"
+font-family = "Fira Code"
 font-size = 11
 
 # Platform-specific configuration
 # Note: ? prefix means "ignore if file doesn't exist"
 config-file = ?linux.conf
 config-file = ?macos.conf
-
