@@ -6,6 +6,9 @@ alias tnv='NVIM_APPNAME=nvim_test nvim'
 alias lzg='lazygit'
 alias lzd='lazydocker'
 
+alias dots-rescan="make -f $HOME/Makefile dots-rescan"
+alias dots-git="make -f $HOME/Makefile dots-git"
+
 if [[ "$OSTYPE" == "darwin"* ]];
   alias os-upgrade="make -f $HOME/Makefile macos-upgrade"
 fi
