@@ -9,7 +9,7 @@ alias lzd='lazydocker'
 alias dots-rescan="make -f $HOME/Makefile dots-rescan"
 alias dots-git="make -f $HOME/Makefile dots-git"
 
-if [[ "$OSTYPE" == "darwin"* ]];
+if [[ "$OSTYPE" == "darwin"* ]]; then
   alias os-upgrade="make -f $HOME/Makefile macos-upgrade"
 fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
