@@ -1,19 +1,15 @@
 return {
-  {
-    "p00f/alabaster.nvim",
-    priority = 1000, -- Load before other plugins to avoid highlight conflicts
-    config = function()
-      vim.opt.termguicolors = true
-      vim.cmd("colorscheme alabaster")
-    end,
-  },
   -- {
   --   "folke/tokyonight.nvim",
   -- },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "alabaster",
+      colorscheme = "rose-pine",
     },
   },
 }
