@@ -19,7 +19,7 @@ dots-submodule-update:
 dots-git:
 	yadm enter lazygit
 
-macos-upgrage:
+macos-upgrade:
 	brew update && brew upgrade
 
 fedora-upgrade:
