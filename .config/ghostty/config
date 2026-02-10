@@ -3,7 +3,7 @@ shell-integration = zsh
 shell-integration-features = ssh-terminfo
 shell-integration-features = ssh-env
 
-theme = dark:TokyoNight, light:Alabaster
+theme = dark:Rose Pine, light:Rose Pine Dawn
 
 gtk-titlebar = false
 
