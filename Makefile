@@ -16,7 +16,7 @@ dots-rescan:
 dots-submodule-update:
 	yadm submodule update --remote
 
-dots-git:
+dots-git: dots-rescan
 	yadm enter lazygit
 
 macos-upgrade:
