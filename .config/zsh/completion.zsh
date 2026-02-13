@@ -28,3 +28,15 @@ if command -v kubectl &>/dev/null; then
   compdef _kubectl_completion_lazy kubectl
 fi
 
+if command -v docker &>/dev/null; then
+  # lazy-load docker completion on first use
+  _docker_completion_lazy() {
+    # drop loader and load real completion
+    unfunction _docker_completion_lazy 2>/dev/null
+    source <(docker completion zsh)
+  }
+
+  # attach lazy loader to docker completion
+  compdef _docker_completion_lazy docker
+fi
+
