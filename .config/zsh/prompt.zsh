@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-unset -f command_not_found_handler
+unset -f command_not_found_handler 2>/dev/null || true
 
 fpath+=($ZSHCONFIG/pure)
 
