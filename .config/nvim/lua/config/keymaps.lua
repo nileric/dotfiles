@@ -32,3 +32,6 @@ keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete word backward" })
 -- Other useful Insert Mode mappings
 keymap.set("i", "<C-u>", "<C-g>u<C-u>", { desc = "Delete to start of line" })
 keymap.set("i", "<C-y>", "<Esc>pa", { desc = "Paste in insert mode" })
+
+-- Wayfinder
+vim.keymap.set("n", "<leader>wf", "<Plug>(WayfinderOpen)", { desc = "Wayfinder" })
