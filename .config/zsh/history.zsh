@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000

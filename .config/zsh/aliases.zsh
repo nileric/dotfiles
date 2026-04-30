@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 alias vim='nvim'
 alias tnv='NVIM_APPNAME=nvim_test nvim'

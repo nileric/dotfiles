@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 export EDITOR='nvim'
 export KUBE_EDITOR='nvim'
@@ -10,7 +10,6 @@ export LESS='-i -R -F -X -M'
 path=(
   $HOME/bin
   $HOME/.local/bin
-  /usr/local/bin
   $path
 )
 

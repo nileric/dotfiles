@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 health_check() {
     local -a terminal_utils=(

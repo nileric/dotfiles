@@ -2,6 +2,9 @@
 
 ZSHCONFIG="$HOME/.config/zsh"
 
+# remove duplicates from path
+typeset -U path
+
 [[ -f "$ZSHCONFIG/history.zsh" ]] && source "$ZSHCONFIG/history.zsh"
 [[ -f "$ZSHCONFIG/completion.zsh" ]] && source "$ZSHCONFIG/completion.zsh"
 [[ -f "$ZSHCONFIG/env.zsh" ]] && source "$ZSHCONFIG/env.zsh"

@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 unset -f command_not_found_handler 2>/dev/null || true
 
