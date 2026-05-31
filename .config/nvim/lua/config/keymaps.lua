@@ -34,7 +34,7 @@ keymap.set("i", "<C-u>", "<C-g>u<C-u>", { desc = "Delete to start of line" })
 keymap.set("i", "<C-y>", "<Esc>pa", { desc = "Paste in insert mode" })
 
 -- Wayfinder
-keymap.set("n", "<leader>cf", "<Plug>(WayfinderOpen)", { desc = "Wayfinder" })
+keymap.set("n", "<leader>cw", "<Plug>(WayfinderOpen)", { desc = "Wayfinder" })
 
 -- nvim-spider
 vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>")
