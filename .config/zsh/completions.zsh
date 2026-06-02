@@ -2,41 +2,39 @@
 
 autoload -Uz compinit
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
-    compinit
-  else
-    compinit -C
-  fi
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-  else
-    compinit -C
-  fi
+if [[ "$OSTYPE" == darwin* ]]; then
+  ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/Library/Caches}/zsh"
+else
+  ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+fi
+
+mkdir -p "$ZSH_CACHE_DIR/completions"
+
+ZCOMPDUMP="$ZSH_CACHE_DIR/zcompdump-${ZSH_VERSION}"
+
+# Rebuild compdump if older than 24h.
+if [[ -n "$ZCOMPDUMP"(#qN.mh+24) ]]; then
+  compinit -d "$ZCOMPDUMP"
+else
+  compinit -C -d "$ZCOMPDUMP"
 fi
 
 if command -v kubectl &>/dev/null; then
-  # lazy-load kubectl completion on first use
-  _kubectl_completion_lazy() {
-    # drop loader and load real completion
-    unfunction _kubectl_completion_lazy 2>/dev/null
-    source <(kubectl completion zsh)
-  }
+  KUBECTL_COMPLETION="$ZSH_CACHE_DIR/completions/kubectl_completion"
 
-  # attach lazy loader to kubectl completion
-  compdef _kubectl_completion_lazy kubectl
+  if [[ ! -f "$KUBECTL_COMPLETION" || "$(command -v kubectl)" -nt "$KUBECTL_COMPLETION" ]]; then
+    kubectl completion zsh >| "$KUBECTL_COMPLETION"
+  fi
+
+  source "$KUBECTL_COMPLETION"
 fi
 
 if command -v docker &>/dev/null; then
-  # lazy-load docker completion on first use
-  _docker_completion_lazy() {
-    # drop loader and load real completion
-    unfunction _docker_completion_lazy 2>/dev/null
-    source <(docker completion zsh)
-  }
+  DOCKER_COMPLETION="$ZSH_CACHE_DIR/completions/docker_completion"
 
-  # attach lazy loader to docker completion
-  compdef _docker_completion_lazy docker
+  if [[ ! -f "$DOCKER_COMPLETION" || "$(command -v docker)" -nt "$DOCKER_COMPLETION" ]]; then
+    docker completion zsh >| "$DOCKER_COMPLETION"
+  fi
+
+  source "$DOCKER_COMPLETION"
 fi
-
