@@ -3,3 +3,4 @@ git:
     - colorArg: always
       # https://github.com/dandavison/delta
       pager: delta --dark --paging=never --hunk-header-style=omit --file-style=omit
+notARepository: skip
