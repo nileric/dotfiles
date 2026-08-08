@@ -1,5 +1,6 @@
 # theme
-theme = dark:Rose Pine, light:Rose Pine Dawn
+# theme = dark:Rose Pine, light:Rose Pine Dawn
+theme = luna
 
 # windows
 gtk-titlebar = false
