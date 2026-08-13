@@ -31,6 +31,7 @@ macos-upgrade: ## homebrew upgrade
 
 fedora-upgrade: ## dnf upgrade
 	sudo dnf upgrade -y
+	@printf '\n'
 	sudo flatpak update -y
 
 linux-install-kanata: ## install keyboard remapper (linux)
