@@ -4,12 +4,11 @@ DOTFILES := $(HOME)/Makefile \
 	$(HOME)/.config/zsh/ \
 	$(HOME)/.config/kanata/ \
 	$(HOME)/.config/lazygit/ \
-	$(HOME)/.config/kitty/ \
 	$(HOME)/.config/nvim/ \
 	$(HOME)/.config/ghostty/
 
 KANATA_VESRION ?= 1.11.0
-NVIM_VERSION ?= 0.12.2
+NVIM_VERSION ?= 0.12.5
 
 help:
 	@grep -E '^[a-zA-Z0-9._/%-]+:.*?## ' $(MAKEFILE_LIST) | \
