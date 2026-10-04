@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 if [[ "$OSTYPE" == darwin* ]]; then
   ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/Library/Caches}/zsh"
 else
