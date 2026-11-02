@@ -11,18 +11,20 @@ if vim.fn.getenv("TERM_PROGRAM") == "ghostty" then
   vim.opt.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 end
 
-vim.g.clipboard = {
-  name = "OSC 52",
-  copy = {
-    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-  },
-  paste = {
-    ["+"] = function()
-      return vim.fn.getreg("+")
-    end,
-    ["*"] = function()
-      return vim.fn.getreg("*")
-    end,
-  },
-}
+if os.getenv("SSH_TTY") or os.getenv("TMUX") then
+  vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+      ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+      ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+      ["+"] = function()
+        return vim.fn.getreg("+")
+      end,
+      ["*"] = function()
+        return vim.fn.getreg("*")
+      end,
+    },
+  }
+end
