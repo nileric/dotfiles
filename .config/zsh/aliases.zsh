@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 alias vim='nvim'
-alias vim-test='NVIM_APPNAME=nvim_test nvim'
+alias vim-test='NVIM_APPNAME=nvim-test nvim'
 
 alias lzg='lazygit'
 alias lzd='lazydocker'
