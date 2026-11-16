@@ -5,11 +5,11 @@ theme = dark:TokyoNight, light:TokyoNight Day
 gtk-titlebar = false
 
 # font
-font-family = "Hack"
+font-family = "Iosevka Term"
 font-size = 12
 
-adjust-cell-height = 5
-adjust-underline-position = 0
+adjust-cell-height = 3
+adjust-underline-position = 10
 
 # mouse
 mouse-hide-while-typing = true
@@ -30,6 +30,9 @@ keybind = ctrl+shift+h=goto_split:left
 keybind = ctrl+shift+j=goto_split:bottom
 keybind = ctrl+shift+k=goto_split:top
 keybind = ctrl+shift+l=goto_split:right
+# font
+keybind = ctrl+shift+plus=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
 # other
 keybind = super+shift+comma=reload_config
 keybind = super+shift+w=close_surface
