@@ -34,8 +34,8 @@ macos-upgrade: ## homebrew upgrade
 	brew update && brew upgrade
 
 .PHONY: fedora-upgrade
-fedora-upgrade: ## dnf upgrade
-	sudo dnf upgrade -y
+fedora-upgrade: ## dnf & flatpak upgrade
+	sudo dnf update --refresh && sudo dnf upgrade -y
 	@printf '\n'
 	sudo flatpak update -y
 
